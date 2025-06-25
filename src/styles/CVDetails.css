@@ -1,0 +1,12 @@
+.cv-details {
+  border: 0.1rem solid #bebfc5;
+  border-radius: var(--border-radius);
+  min-width: 30%;
+  max-height: fit-content;
+}
+
+.cv-details h2 {
+  text-align: center;
+  padding: 0.5rem 0;
+  border-bottom: 0.1rem solid #bebfc5;
+}

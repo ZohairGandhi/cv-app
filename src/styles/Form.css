@@ -1,0 +1,35 @@
+form.not-toggled {
+  display: none;
+}
+
+form.is-toggled {
+  animation: expand 250ms ease-in-out;
+  transform-origin: top;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+@keyframes expand {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.input-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-pair input {
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  font-family: "Roboto", sans-serif;
+}
