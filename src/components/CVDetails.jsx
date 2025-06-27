@@ -1,15 +1,16 @@
-import CVSection from "./CVSection";
 import "../styles/CVDetails.css";
+import EducationSection from "./EducationSection";
+import PersonalInfoSection from "./PersonalInfoSection";
 
 function CVDetails({ updatePersonalInfo }) {
   return (
     <div className="cv-details">
       <h2>CV Details</h2>
-      <CVSection
+      <PersonalInfoSection
         sectionName="Personal Info"
         formUpdateHandler={updatePersonalInfo}
       />
-      <CVSection sectionName="Education" />
+      <EducationSection sectionName="Education" />
     </div>
   );
 }

@@ -1,0 +1,94 @@
+.cv-section {
+  border: none;
+  border-bottom: 0.1rem solid #bebfc5;
+}
+
+.cv-section:last-child {
+  border: none;
+}
+
+.section-btn {
+  appearance: none;
+  border: none;
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.cv-section img {
+  height: 1.5rem;
+}
+
+.cv-section p {
+  font-size: 1.1rem;
+}
+
+.cv-section svg {
+  transition: transform 250ms ease-in-out;
+  margin-left: auto;
+}
+
+.cv-section svg.is-toggled {
+  transform: rotate(180deg);
+}
+
+div.not-toggled {
+  display: none;
+}
+
+div.is-toggled {
+  animation: expand 250ms ease-in-out;
+  transform-origin: top;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes expand {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.input-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-pair input {
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  font-family: "Roboto", sans-serif;
+}
+
+.add-btn {
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #000;
+  width: 90%;
+  margin: 0 auto 1rem auto;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.add-btn:hover {
+  opacity: 1;
+}
