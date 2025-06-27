@@ -1,0 +1,15 @@
+.personal-info-preview {
+  /* margin: 0 auto; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personal-info-preview h1 {
+  font-size: 2.5rem;
+}
+
+.personal-info-preview .contact-container {
+  display: flex;
+  gap: 1rem;
+}
