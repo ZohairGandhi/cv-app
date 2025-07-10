@@ -2,15 +2,27 @@ import "../styles/CVDetails.css";
 import EducationSection from "./EducationSection";
 import PersonalInfoSection from "./PersonalInfoSection";
 
-function CVDetails({ updatePersonalInfo }) {
+function CVDetails({
+  personalInfo,
+  updatePersonalInfo,
+  educationList,
+  addEducationItem,
+  updateEducationItem,
+}) {
   return (
     <div className="cv-details">
       <h2>CV Details</h2>
       <PersonalInfoSection
         sectionName="Personal Info"
-        formUpdateHandler={updatePersonalInfo}
+        personalInfo={personalInfo}
+        updatePersonalInfo={updatePersonalInfo}
       />
-      <EducationSection sectionName="Education" />
+      <EducationSection
+        sectionName="Education"
+        educationList={educationList}
+        addEducationItem={addEducationItem}
+        updateEducationItem={updateEducationItem}
+      />
     </div>
   );
 }

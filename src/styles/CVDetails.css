@@ -3,6 +3,7 @@
   border-radius: var(--border-radius);
   min-width: 30%;
   max-height: fit-content;
+  overflow-y: auto;
 }
 
 .cv-details h2 {

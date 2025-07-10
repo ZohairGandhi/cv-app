@@ -57,12 +57,20 @@ div.is-toggled {
   }
 }
 
+.personal-info-item {
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.sect-item {
+  padding: 1rem;
+  padding-top: 0;
+}
+
 form {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 1rem;
-  padding-top: 0;
 }
 
 .input-pair {
@@ -75,6 +83,17 @@ form {
   padding: 0.5rem;
   border-radius: var(--border-radius);
   font-family: "Roboto", sans-serif;
+}
+
+.horizontal-pair {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+}
+
+.horizontal-pair div {
+  flex: 1 1 auto;
 }
 
 .add-btn {

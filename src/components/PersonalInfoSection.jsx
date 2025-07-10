@@ -2,7 +2,11 @@ import "../styles/Section.css";
 import { useState } from "react";
 import accountOutline from "../assets/icons/account-outline.svg";
 
-function PersonalInfoSection({ sectionName, formUpdateHandler }) {
+function PersonalInfoSection({
+  sectionName,
+  personalInfo,
+  updatePersonalInfo,
+}) {
   const [isToggled, setIsToggled] = useState(false);
 
   return (
@@ -24,33 +28,52 @@ function PersonalInfoSection({ sectionName, formUpdateHandler }) {
         </svg>
       </button>
 
-      <div className={isToggled ? "is-toggled" : "not-toggled"}>
+      <div
+        className={
+          isToggled
+            ? "is-toggled personal-info-item"
+            : "not-toggled personal-info-item"
+        }
+      >
         <form
-          onChange={() => {
-            const updatedName = document.querySelector("#name-tf").value;
-            const updatedEmail = document.querySelector("#email-tf").value;
-            const updatedPhone = document.querySelector("#phone-tf").value;
-
-            formUpdateHandler({
-              name: updatedName,
-              email: updatedEmail,
-              phone: updatedPhone,
-            });
+          onChange={(e) => {
+            const updatedValue = e.target.value;
+            switch (e.target.id) {
+              case "name-tf":
+                updatePersonalInfo({ name: updatedValue });
+                break;
+              case "email-tf":
+                updatePersonalInfo({ email: updatedValue });
+                break;
+              case "phone-tf":
+                updatePersonalInfo({ phone: updatedValue });
+                break;
+            }
           }}
         >
           <div className="input-pair">
             <label htmlFor="name-tf">Full Name</label>
-            <input type="text" id="name-tf" />
+            <input type="text" id="name-tf" defaultValue={personalInfo.name} />
           </div>
 
-          <div className="input-pair">
-            <label htmlFor="email-tf">Email</label>
-            <input type="email" id="email-tf" />
-          </div>
+          <div className="horizontal-pair">
+            <div className="input-pair">
+              <label htmlFor="email-tf">Email</label>
+              <input
+                type="email"
+                id="email-tf"
+                defaultValue={personalInfo.email}
+              />
+            </div>
 
-          <div className="input-pair">
-            <label htmlFor="phone-tf">Phone</label>
-            <input type="tel" id="phone-tf" />
+            <div className="input-pair">
+              <label htmlFor="phone-tf">Phone</label>
+              <input
+                type="tel"
+                id="phone-tf"
+                defaultValue={personalInfo.phone}
+              />
+            </div>
           </div>
         </form>
       </div>
