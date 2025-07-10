@@ -1,6 +1,6 @@
 import "../styles/Section.css";
 import { useState } from "react";
-import schoolOutline from "../../public/icons/school-outline.svg";
+import schoolOutline from "../assets/icons/school-outline.svg";
 
 function EducationSection({ sectionName, formUpdateHandler }) {
   const [isToggled, setIsToggled] = useState(false);

@@ -1,6 +1,6 @@
 import "../styles/Section.css";
 import { useState } from "react";
-import accountOutline from "../../public/icons/account-outline.svg";
+import accountOutline from "../assets/icons/account-outline.svg";
 
 function PersonalInfoSection({ sectionName, formUpdateHandler }) {
   const [isToggled, setIsToggled] = useState(false);
