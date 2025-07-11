@@ -13,12 +13,10 @@ function CVDetails({
     <div className="cv-details">
       <h2>CV Details</h2>
       <PersonalInfoSection
-        sectionName="Personal Info"
         personalInfo={personalInfo}
         updatePersonalInfo={updatePersonalInfo}
       />
       <EducationSection
-        sectionName="Education"
         educationList={educationList}
         addEducationItem={addEducationItem}
         updateEducationItem={updateEducationItem}

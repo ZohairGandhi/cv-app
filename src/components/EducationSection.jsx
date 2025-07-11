@@ -3,7 +3,6 @@ import { useState } from "react";
 import schoolOutline from "../assets/icons/school-outline.svg";
 
 function EducationSection({
-  sectionName,
   educationList,
   addEducationItem,
   updateEducationItem,
@@ -15,7 +14,7 @@ function EducationSection({
       <button className="section-btn" onClick={() => setIsToggled(!isToggled)}>
         <img src={schoolOutline} alt="" />
 
-        <p>{sectionName}</p>
+        <p>Education</p>
 
         <svg
           xmlns="http://www.w3.org/2000/svg"

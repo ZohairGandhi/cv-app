@@ -2,11 +2,7 @@ import "../styles/Section.css";
 import { useState } from "react";
 import accountOutline from "../assets/icons/account-outline.svg";
 
-function PersonalInfoSection({
-  sectionName,
-  personalInfo,
-  updatePersonalInfo,
-}) {
+function PersonalInfoSection({ personalInfo, updatePersonalInfo }) {
   const [isToggled, setIsToggled] = useState(false);
 
   return (
@@ -14,7 +10,7 @@ function PersonalInfoSection({
       <button className="section-btn" onClick={() => setIsToggled(!isToggled)}>
         <img src={accountOutline} alt="" />
 
-        <p>{sectionName}</p>
+        <p>Personal Info</p>
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
