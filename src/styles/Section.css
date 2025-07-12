@@ -79,7 +79,8 @@ form {
   gap: 0.5rem;
 }
 
-.input-pair input {
+.input-pair input,
+.input-pair textarea {
   padding: 0.5rem;
   border-radius: var(--border-radius);
   font-family: "Roboto", sans-serif;
@@ -110,4 +111,8 @@ form {
 
 .add-btn:hover {
   opacity: 1;
+}
+
+textarea {
+  border: 2px solid #000;
 }

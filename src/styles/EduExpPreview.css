@@ -1,0 +1,36 @@
+.education-preview,
+.experience-preview {
+  margin-top: 1rem;
+}
+
+hr {
+  margin-bottom: 0.5rem;
+}
+
+.edu-item,
+.exp-item {
+  /* margin: 0.5rem 0 0 1rem; */
+  margin: 0 0 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.exp-item {
+  margin-bottom: 1rem;
+}
+
+.edu-item div,
+.exp-item div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.institution,
+.employer {
+  font-weight: bold;
+}
+
+.description {
+  margin-left: 1rem;
+}

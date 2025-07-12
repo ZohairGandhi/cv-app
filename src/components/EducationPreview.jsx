@@ -1,4 +1,4 @@
-import "../styles/EducationPreview.css";
+import "../styles/EduExpPreview.css";
 
 function EducationPreview({ educationList }) {
   return (

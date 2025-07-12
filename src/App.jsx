@@ -40,6 +40,33 @@ function App() {
     );
   }
 
+  const [experienceList, setExperienceList] = useState([]);
+  function addExperienceItem() {
+    setExperienceList([
+      ...experienceList,
+      {
+        id: crypto.randomUUID(),
+        employer: "",
+        title: "",
+        start: "",
+        end: "",
+        location: "",
+        description: "",
+      },
+    ]);
+  }
+
+  function updateExperienceItem(id, updatedItem) {
+    setExperienceList(
+      experienceList.map((item) => {
+        if (item.id === id) {
+          return { ...item, ...updatedItem };
+        }
+        return item;
+      }),
+    );
+  }
+
   return (
     <>
       <header>
@@ -53,8 +80,15 @@ function App() {
           educationList={educationList}
           addEducationItem={addEducationItem}
           updateEducationItem={updateEducationItem}
+          experienceList={experienceList}
+          addExperienceItem={addExperienceItem}
+          updateExperienceItem={updateExperienceItem}
         />
-        <Preview personalInfo={personalInfo} educationList={educationList} />
+        <Preview
+          personalInfo={personalInfo}
+          educationList={educationList}
+          experienceList={experienceList}
+        />
       </div>
     </>
   );
