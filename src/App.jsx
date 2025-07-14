@@ -10,6 +10,7 @@ function App() {
     phone: "",
   });
   const [educationList, setEducationList] = useState([]);
+  const [skills, setSkills] = useState("");
 
   function updatePersonalInfo(updatedInfo) {
     setPersonalInfo({ ...personalInfo, ...updatedInfo });
@@ -67,6 +68,10 @@ function App() {
     );
   }
 
+  function updateSkills(updatedSkills) {
+    setSkills(updatedSkills);
+  }
+
   return (
     <>
       <header>
@@ -83,11 +88,14 @@ function App() {
           experienceList={experienceList}
           addExperienceItem={addExperienceItem}
           updateExperienceItem={updateExperienceItem}
+          skills={skills}
+          updateSkills={updateSkills}
         />
         <Preview
           personalInfo={personalInfo}
           educationList={educationList}
           experienceList={experienceList}
+          skills={skills}
         />
       </div>
     </>

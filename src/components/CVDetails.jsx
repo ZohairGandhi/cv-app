@@ -2,6 +2,7 @@ import "../styles/CVDetails.css";
 import EducationSection from "./EducationSection";
 import PersonalInfoSection from "./PersonalInfoSection";
 import ExperienceSection from "./ExperienceSection";
+import SkillsSection from "./SkillsSection";
 
 function CVDetails({
   personalInfo,
@@ -12,6 +13,8 @@ function CVDetails({
   experienceList,
   addExperienceItem,
   updateExperienceItem,
+  skills,
+  updateSkills,
 }) {
   return (
     <div className="cv-details">
@@ -30,6 +33,7 @@ function CVDetails({
         addExperienceItem={addExperienceItem}
         updateExperienceItem={updateExperienceItem}
       />
+      <SkillsSection skills={skills} updateSkills={updateSkills} />
     </div>
   );
 }

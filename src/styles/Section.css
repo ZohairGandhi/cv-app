@@ -57,7 +57,8 @@ div.is-toggled {
   }
 }
 
-.personal-info-item {
+.personal-info-item,
+.skills-item {
   padding: 1rem;
   padding-top: 0;
 }
