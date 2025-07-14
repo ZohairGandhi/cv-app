@@ -25,11 +25,7 @@ function PersonalInfoSection({ personalInfo, updatePersonalInfo }) {
       </button>
 
       <div
-        className={
-          isToggled
-            ? "is-toggled personal-info-item"
-            : "not-toggled personal-info-item"
-        }
+        className={isToggled ? "is-toggled personal-info-item" : "not-toggled"}
       >
         <form
           onChange={(e) => {
