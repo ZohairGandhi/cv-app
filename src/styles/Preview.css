@@ -18,18 +18,56 @@
   padding: 0.5rem 0;
   background-color: #bebfc5;
   overflow: auto;
+  position: relative;
 }
 
 .preview {
   background-color: #fff;
-  width: 80%;
+  width: 210mm;
   aspect-ratio: 1/1.4;
   margin: 0 auto;
-  padding: 5%;
+  padding: 2cm;
   display: flex;
   flex-direction: column;
 }
 
 .preview * {
   font-family: "cmu_serifroman", serif;
+}
+
+.preview-container button {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  appearance: none;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  background-color: #13813a;
+  color: #fff;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.preview-container button:hover {
+  opacity: 1;
+}
+
+@media print {
+  .preview-container {
+    border: none;
+    padding: 0;
+    background-color: #fff;
+  }
+
+  .preview-container button {
+    display: none;
+  }
+
+  .preview {
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
 }

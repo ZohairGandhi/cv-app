@@ -10,3 +10,10 @@ header {
   padding: 2rem;
   height: 100%;
 }
+
+@media print {
+  header,
+  .cv-details {
+    display: none;
+  }
+}

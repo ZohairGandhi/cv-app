@@ -7,6 +7,9 @@ import SkillsPreview from "./SkillsPreview";
 function Preview({ personalInfo, educationList, experienceList, skills }) {
   return (
     <div className="preview-container">
+      <button type="button" onClick={() => print()}>
+        Print
+      </button>
       <div className="preview">
         <PersonalInfoPreview personalInfo={personalInfo} />
         <EducationPreview educationList={educationList} />
