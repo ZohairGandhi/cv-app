@@ -9,7 +9,7 @@ function EducationPreview({ educationList }) {
 
         {educationList.map((item) => {
           return (
-            <div className="edu-item">
+            <div className="edu-item" key={item.id}>
               <div>
                 <p className="institution">{item.institution}</p>
                 <p>{item.location}</p>

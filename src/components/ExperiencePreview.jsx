@@ -9,7 +9,7 @@ function ExperiencePreview({ experienceList }) {
 
         {experienceList.map((item) => {
           return (
-            <div className="exp-item">
+            <div className="exp-item" key={item.id}>
               <div>
                 <p className="employer">
                   {item.employer} | {item.title}

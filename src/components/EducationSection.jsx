@@ -31,11 +31,10 @@ function EducationSection({
       <div className={isToggled ? "is-toggled" : "not-toggled"}>
         {educationList.map((item, idx) => {
           return (
-            <div className="sect-item">
+            <div className="sect-item" key={item.id}>
               <p>Item #{idx + 1}</p>
 
               <form
-                key={item.id}
                 onChange={(e) => {
                   const updatedValue = e.target.value;
 
