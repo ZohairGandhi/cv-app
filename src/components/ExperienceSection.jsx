@@ -6,6 +6,7 @@ function ExperienceSection({
   experienceList,
   addExperienceItem,
   updateExperienceItem,
+  removeExperienceItem,
 }) {
   const [isToggled, setIsToggled] = useState(false);
 
@@ -32,7 +33,15 @@ function ExperienceSection({
         {experienceList.map((item, idx) => {
           return (
             <div className="sect-item" key={item.id}>
-              <p>Item #{idx + 1}</p>
+              <div className="item-head">
+                <p>Item #{idx + 1}</p>
+                <button
+                  type="button"
+                  onClick={() => removeExperienceItem(item.id)}
+                >
+                  Delete
+                </button>
+              </div>
 
               <form
                 onChange={(e) => {

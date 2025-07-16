@@ -10,9 +10,11 @@ function CVDetails({
   educationList,
   addEducationItem,
   updateEducationItem,
+  removeEducationItem,
   experienceList,
   addExperienceItem,
   updateExperienceItem,
+  removeExperienceItem,
   skills,
   updateSkills,
 }) {
@@ -27,11 +29,13 @@ function CVDetails({
         educationList={educationList}
         addEducationItem={addEducationItem}
         updateEducationItem={updateEducationItem}
+        removeEducationItem={removeEducationItem}
       />
       <ExperienceSection
         experienceList={experienceList}
         addExperienceItem={addExperienceItem}
         updateExperienceItem={updateExperienceItem}
+        removeExperienceItem={removeExperienceItem}
       />
       <SkillsSection skills={skills} updateSkills={updateSkills} />
     </div>

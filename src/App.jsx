@@ -42,6 +42,10 @@ function App() {
   }
 
   const [experienceList, setExperienceList] = useState([]);
+  function removeEducationItem(id) {
+    setEducationList(educationList.filter((item) => item.id !== id));
+  }
+
   function addExperienceItem() {
     setExperienceList([
       ...experienceList,
@@ -68,6 +72,10 @@ function App() {
     );
   }
 
+  function removeExperienceItem(id) {
+    setExperienceList(experienceList.filter((item) => item.id !== id));
+  }
+
   function updateSkills(updatedSkills) {
     setSkills(updatedSkills);
   }
@@ -85,9 +93,11 @@ function App() {
           educationList={educationList}
           addEducationItem={addEducationItem}
           updateEducationItem={updateEducationItem}
+          removeEducationItem={removeEducationItem}
           experienceList={experienceList}
           addExperienceItem={addExperienceItem}
           updateExperienceItem={updateExperienceItem}
+          removeExperienceItem={removeExperienceItem}
           skills={skills}
           updateSkills={updateSkills}
         />

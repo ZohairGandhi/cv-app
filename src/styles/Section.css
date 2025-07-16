@@ -68,6 +68,27 @@ div.is-toggled {
   padding-top: 0;
 }
 
+.item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-head button {
+  appearance: none;
+  background-color: #fff;
+  color: #f00;
+  border: 1px solid #f00;
+  padding: 0.25rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  opacity: 0.65;
+}
+
+.item-head button:hover {
+  opacity: 1;
+}
+
 form {
   display: flex;
   flex-direction: column;
